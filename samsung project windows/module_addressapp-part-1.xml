@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_addressapp-part-1" default="compile.module.addressapp-part-1">
+  <dirname property="module.addressapp-part-1.basedir" file="${ant.file.module_addressapp-part-1}"/>
+  
+  <property name="module.jdk.home.addressapp-part-1" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.addressapp-part-1" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.addressapp-part-1" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.addressapp-part-1" value="-encoding UTF-8 -source 9 -target 9 ${compiler.args}"/>
+  
+  <property name="addressapp-part-1.output.dir" value="${module.addressapp-part-1.basedir}/bin"/>
+  <property name="addressapp-part-1.testoutput.dir" value="${module.addressapp-part-1.basedir}/bin"/>
+  
+  <path id="addressapp-part-1.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="addressapp-part-1.module.production.classpath">
+    <path refid="${module.jdk.classpath.addressapp-part-1}"/>
+    <path refid="library.новая_папка.classpath"/>
+  </path>
+  
+  <path id="addressapp-part-1.runtime.production.module.classpath">
+    <pathelement location="${addressapp-part-1.output.dir}"/>
+    <path refid="library.новая_папка.classpath"/>
+  </path>
+  
+  <path id="addressapp-part-1.module.classpath">
+    <pathelement location="${addressapp-part-1.output.dir}"/>
+    <path refid="${module.jdk.classpath.addressapp-part-1}"/>
+    <path refid="library.новая_папка.classpath"/>
+  </path>
+  
+  <path id="addressapp-part-1.runtime.module.classpath">
+    <pathelement location="${addressapp-part-1.output.dir}"/>
+    <path refid="library.новая_папка.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.addressapp-part-1">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.addressapp-part-1">
+    <patternset refid="excluded.from.module.addressapp-part-1"/>
+  </patternset>
+  
+  <path id="addressapp-part-1.module.sourcepath">
+    <dirset dir="${module.addressapp-part-1.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.addressapp-part-1" depends="compile.module.addressapp-part-1.production,compile.module.addressapp-part-1.tests" description="Compile module AddressApp-Part-1"/>
+  
+  <target name="compile.module.addressapp-part-1.production" depends="register.custom.compilers" description="Compile module AddressApp-Part-1; production classes">
+    <mkdir dir="${addressapp-part-1.output.dir}"/>
+    <javac2 destdir="${addressapp-part-1.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.addressapp-part-1}/javac">
+      <compilerarg line="${compiler.args.addressapp-part-1}"/>
+      <bootclasspath refid="addressapp-part-1.module.bootclasspath"/>
+      <classpath refid="addressapp-part-1.module.production.classpath"/>
+      <src refid="addressapp-part-1.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.addressapp-part-1"/>
+    </javac2>
+    
+    <copy todir="${addressapp-part-1.output.dir}">
+      <fileset dir="${module.addressapp-part-1.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.addressapp-part-1.tests" depends="register.custom.compilers,compile.module.addressapp-part-1.production" description="compile module AddressApp-Part-1; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.addressapp-part-1" description="cleanup module">
+    <delete dir="${addressapp-part-1.output.dir}"/>
+    <delete dir="${addressapp-part-1.testoutput.dir}"/>
+  </target>
+</project>

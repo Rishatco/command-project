@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sagidllin.samsung.project.view.RunTestDialogController">
+   <children>
+      <ProgressBar fx:id="progressBar" layoutX="14.0" layoutY="363.0" prefHeight="29.0" prefWidth="572.0" progress="0.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+      <Label fx:id="number_question" layoutX="14.0" layoutY="316.0" prefHeight="41.0" prefWidth="166.0" text="111" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="quest" layoutX="70.0" layoutY="14.0" prefHeight="67.0" prefWidth="432.0" text="Label" wrapText="true" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label fx:id="answer1" layoutX="70.0" layoutY="81.0" prefHeight="48.0" prefWidth="460.0" text="Label" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="101.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="answer2" layoutX="70.0" layoutY="129.0" prefHeight="48.0" prefWidth="460.0" text="Label" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="169.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="answer3" layoutX="57.0" layoutY="237.0" prefHeight="48.0" prefWidth="460.0" text="Label" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="237.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="answer4" layoutX="70.0" layoutY="285.0" prefHeight="48.0" prefWidth="851.0" text="Label" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="305.0">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Label fx:id="answer5" layoutX="70.0" layoutY="353.0" prefHeight="48.0" prefWidth="860.0" text="Label" AnchorPane.topAnchor="373.0">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Label fx:id="answer6" layoutX="70.0" layoutY="421.0" prefHeight="48.0" prefWidth="860.0" text="Label" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="441.0">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Label fx:id="answer7" layoutX="70.0" layoutY="489.0" prefHeight="48.0" text="Label" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="509.0">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Label fx:id="answer8" layoutX="70.0" layoutY="557.0" prefHeight="48.0" text="Label" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="577.0">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Label fx:id="answer9" layoutX="70.0" layoutY="598.0" prefHeight="48.0" text="Label" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="645.0">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Label fx:id="answer10" layoutX="70.0" layoutY="693.0" prefHeight="48.0" prefWidth="860.0" text="Label" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="713.0">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Button fx:id="onStart" layoutX="921.0" layoutY="721.0" mnemonicParsing="false" onAction="#runTest" text="начать" AnchorPane.bottomAnchor="48.0" AnchorPane.rightAnchor="12.0" />
+   </children>
+</AnchorPane>

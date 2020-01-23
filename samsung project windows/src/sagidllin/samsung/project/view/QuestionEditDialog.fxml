@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sagidllin.samsung.project.view.QuestionEditDialogController">
+   <children>
+      <SplitPane dividerPositions="0.6120401337792643" layoutX="8.0" layoutY="14.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <GridPane layoutX="4.0" layoutY="14.0" prefHeight="288.0" prefWidth="355.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="158.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.0" minWidth="10.0" prefWidth="196.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="121.0" minHeight="10.0" prefHeight="97.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="204.0" minHeight="10.0" prefHeight="97.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="146.0" minHeight="10.0" prefHeight="97.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="146.0" minHeight="10.0" prefHeight="97.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Вопрос" />
+                        <Label prefHeight="22.0" prefWidth="184.0" text="Количество вариантов" textAlignment="CENTER" GridPane.rowIndex="1" />
+                        <Label text="Ответ" GridPane.rowIndex="3" />
+                        <Label text="Время" GridPane.rowIndex="2" />
+                        <TextField fx:id="quest" GridPane.columnIndex="1" />
+                        <TextField fx:id="number_variants" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="time" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="answer" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <ButtonBar layoutX="148.0" layoutY="344.0" prefHeight="40.0" prefWidth="200.0">
+                    <buttons>
+                      <Button mnemonicParsing="false" onAction="#handleOk" text="Принять" />
+                        <Button mnemonicParsing="false" onAction="#handleCancel" text="Отмена" />
+                    </buttons>
+                  </ButtonBar>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <GridPane layoutX="13.0" layoutY="35.0" prefHeight="359.0" prefWidth="201.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="26.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="175.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="1)" />
+                        <Label text="2)" GridPane.rowIndex="1" />
+                        <Label text="3)" GridPane.rowIndex="2" />
+                        <Label text="4)" GridPane.rowIndex="3" />
+                        <Label text="5)" GridPane.rowIndex="4" />
+                        <Label text="6)" GridPane.rowIndex="5" />
+                        <Label text="7)" GridPane.rowIndex="6" />
+                        <Label text="8)" GridPane.rowIndex="7" />
+                        <Label text="9)" GridPane.rowIndex="8" />
+                        <Label text="10)" GridPane.rowIndex="9" />
+                        <TextField fx:id="answer1" prefHeight="19.0" prefWidth="174.0" GridPane.columnIndex="1" />
+                        <TextField fx:id="answer2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="answer3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="answer4" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="answer5" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="answer6" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="answer7" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="answer8" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <TextField fx:id="answer9" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <TextField fx:id="answer10" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                     </children>
+                  </GridPane>
+                  <Label layoutX="88.0" layoutY="14.0" text="Варианты ответов" AnchorPane.leftAnchor="88.0" AnchorPane.topAnchor="14.0" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
